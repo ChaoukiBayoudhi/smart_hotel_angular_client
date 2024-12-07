@@ -1,13 +1,17 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component,NgModule } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Hotel } from '../../../classes/hotel';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-hotel',
   standalone: true,
-  imports: [HttpClientModule,FormsModule],
+  imports: [
+    HttpClientModule,
+    FormsModule, 
+    RouterModule
+  ],
   templateUrl: './add-hotel.component.html',
   styleUrl: './add-hotel.component.css'
 })
