@@ -1,1 +1,13 @@
-<p>add-hotel works!</p>
+<h1>Add New Hotel</h1>
+<form (ngSubmit)="addHotel()">
+    <label>Hotel Name</label>
+    <input type="text" [(ngModel)]="hotel.name" name="name" required
+    />
+    <br>
+    <label>Hotel Rating</label>
+    <input type="text" [(ngModel)]="hotel.rating" name="rating" required
+    />
+    <div>
+            <button type="submit">Add Hotel</button>
+    </div>
+</form>
