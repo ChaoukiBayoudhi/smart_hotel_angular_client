@@ -28,10 +28,10 @@
       <td class="border px-2 py-2">{{ hotel.id }}</td>
       <td class="border px-2 py-2">{{ hotel.name }}</td>
       <td class="border px-2 py-2">{{ hotel.rating }}</td>
-      <td class="border px-2 py-2">{{ hotel.address }}</td>
+      <td class="border px-2 py-2">{{ hotel.address?.street }}, {{ hotel.address?.city }}</td>
       <td class="border px-2 py-2">
         <button
-          type="button"
+          (click)="updateHotel(hotel)"
           class="inline-flex items-center justify-center px-4 py-2 bg-secondary-500 text-white font-semibold rounded-lg
                  hover:bg-secondary-600 focus:outline-none focus:ring-2 focus:ring-secondary-400 focus:ring-offset-2
                  transform transition-all duration-200 ease-in-out hover:scale-105
@@ -46,6 +46,7 @@
         <td class="border px-2 py-2">
         <button
           type="button"
+          (click)="removeHotel(hotel.id)"
           class="inline-flex items-center justify-center px-4 py-2 bg-red-500 text-white font-semibold rounded-lg
                  hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2
                  transform transition-all duration-200 ease-in-out hover:scale-105
