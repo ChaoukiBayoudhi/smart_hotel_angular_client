@@ -4,11 +4,13 @@ export class Guest {
   email: string;
   phone: string;
 
-  constructor(name: string, email: string, phone: string, id: number) {
-      this.id = id;
-      this.name = name;
-      this.email = email;
-      this.phone = phone;
+  constructor();
+  constructor(name: string, email: string, phone: string, id: number);
+  constructor(name?: string, email?: string, phone?: string, id?: number) {
+      this.id = id || 0;
+      this.name = name || '';
+      this.email = email || '';
+      this.phone = phone || '';
   }
 
   toString(): string {

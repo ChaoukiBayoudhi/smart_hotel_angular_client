@@ -4,11 +4,13 @@ export class Expense {
   date: Date;
   amount: number;
 
-  constructor(description: string, date: Date, amount: number, id: number) {
-      this.id = id;
-      this.description = description;
-      this.date = date;
-      this.amount = amount;
+  constructor();
+  constructor(description: string, date: Date, amount: number, id: number);
+  constructor(description?: string, date?: Date, amount?: number, id?: number) {
+      this.id = id || 0;
+      this.description = description || '';
+      this.date = date || new Date();
+      this.amount = amount || 0;
   }
 
 

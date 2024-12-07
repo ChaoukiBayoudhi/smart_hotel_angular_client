@@ -8,10 +8,12 @@ export class Room {
     roomNumber: string;
     type: RoomType;
 
-    constructor(roomNumber: string, type: RoomType, id: number) {
-        this.id = id;
-        this.roomNumber = roomNumber;
-        this.type = type;
+    constructor();
+    constructor(roomNumber: string, type: RoomType, id: number);
+    constructor(roomNumber?: string, type?: RoomType, id?: number) {
+        this.id = id || 0;
+        this.roomNumber = roomNumber || '';
+        this.type = type || RoomType.SINGLE;
     }
 
 
